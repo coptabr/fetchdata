@@ -22,12 +22,16 @@ function FetchData() {
 
   return (
     <>
-      {data.map((item) => (
-        <div key={item.id}>
-          <p>{item.title}</p>
-          <img src={item.thumbnail} />
-        </div>
-      ))}
+      {data.map((item, i) => {
+        if (i < 10) {
+          return (
+            <div key={item.id}>
+              <p>{item.title}</p>
+              <img src={item.thumbnail} />
+            </div>
+          );
+        }
+      })}
     </>
   );
 }

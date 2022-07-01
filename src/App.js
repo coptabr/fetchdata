@@ -1,11 +1,11 @@
 import "./App.css";
-import Fetchdata from "./fetchdata";
+import Card from "./components/card/Card";
+import Fetchdata from "./components/fetch/Fetchdata";
 
 function App() {
   return (
     <div className="App">
-      <Fetchdata />
-
+      <Card />
       {/* 
       <Fetchdata>
         <Card />
