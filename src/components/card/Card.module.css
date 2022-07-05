@@ -9,11 +9,13 @@
   border: 1px solid white;
   border-radius: 16px;
   width: 20vw;
+  min-width: 240px;
+  max-width: 250px;
   height: 30vh;
   box-shadow: 0px 0px 6.3px rgba(0, 0, 0, 0.1), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
-.img {
+.gameImg {
   position: relative;
   background-image: url("https://www.mmobomb.com/g/1118/thumbnail.jpg");
   background-repeat: no-repeat;
@@ -25,10 +27,37 @@
 }
 
 .shortDesc {
+  display: flex;
+  align-items: center;
   margin-top: 1px;
   position: relative;
   border: 1px solid rgb(221, 221, 221);
   border-radius: 16px;
   width: 100%;
   height: 25%;
+}
+
+.details {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background-color: rgb(182, 28, 22);
+}
+
+.btnDetails {
+  font-size: 1.5em;
+  color: white;
+}
+
+.textDesc {
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
