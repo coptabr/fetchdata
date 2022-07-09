@@ -1,16 +1,13 @@
 import "./App.css";
-import Card from "./components/card/Card";
 import Fetchdata from "./components/fetch/Fetchdata";
+import Layout from "./layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      <Card />
-      {/* 
-      <Fetchdata>
-        <Card />
-      </Fetchdata>
-      */}
+      <Layout>
+        <Fetchdata />
+      </Layout>
     </div>
   );
 }

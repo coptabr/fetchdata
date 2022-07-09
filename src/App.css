@@ -1,11 +1,5 @@
 .App {
-  border: 1px solid red;
-  height: 100vh;
-  display: flex;
-  text-align: center;
-  justify-items: center;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
 }
 
 .App-logo {

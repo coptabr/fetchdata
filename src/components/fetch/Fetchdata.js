@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import Card from "../card/Card";
 
 function FetchData() {
   let [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/games`)
+    fetch(`http://192.168.100.3:5000/games`)
       .then((response) => response.json())
       .then((loadData) => setData(loadData));
 
@@ -23,12 +24,15 @@ function FetchData() {
   return (
     <>
       {data.map((item, i) => {
-        if (i < 10) {
+        if (i < 12) {
           return (
-            <div key={item.id}>
-              <p>{item.title}</p>
-              <img src={item.thumbnail} />
-            </div>
+            <Card
+              key={item.id}
+              title={item.title}
+              thumbnail={item.thumbnail}
+              platform={item.platform}
+              desc={item.short_description}
+            />
           );
         }
       })}
