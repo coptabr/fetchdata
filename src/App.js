@@ -1,5 +1,7 @@
+import { Pagination } from "semantic-ui-react";
 import "./App.css";
 import Fetchdata from "./components/fetch/Fetchdata";
+import Filter from "./components/filter/Filter";
 import Header from "./components/header/Header";
 import Layout from "./layout/Layout";
 
@@ -8,7 +10,9 @@ function App() {
     <div className="App">
       <Layout>
         <Header />
-        {/* <Fetchdata /> */}
+        <Filter />
+        <Fetchdata />
+        {/* <Pagination /> */}
       </Layout>
     </div>
   );

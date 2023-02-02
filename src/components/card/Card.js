@@ -2,10 +2,10 @@ import { BsPlusCircleDotted } from "react-icons/bs";
 import classes from "./Card.module.css";
 
 function Card(props) {
-  //const [title, thumbnail, short_description] = [...props]
+  //const [title, thumbnail, short_description, style] = [...props]
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} style={props.style}>
       <div
         className={classes.gameImg}
         style={{ backgroundImage: `url(${props.thumbnail})` }}

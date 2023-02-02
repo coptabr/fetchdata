@@ -1,29 +1,24 @@
 import { useEffect, useState } from "react";
 import Card from "../card/Card";
+import classes from "./Fetchdata.module.css";
+
+// let [filtering, setFiltering] = useState([]);
 
 function FetchData() {
   let [data, setData] = useState([]);
-
   useEffect(() => {
-    fetch(`http://192.168.100.3:5000/games`)
+    fetch(`http://localhost:5000/games`)
       .then((response) => response.json())
       .then((loadData) => setData(loadData));
-
-    /*     const fetching = async () => {
-      const apiResponse = await fetch("http://localhost:5000/games");
-      const apiResponseJSON = await apiResponse.json();
-      //console.log(apiResponseJSON);
-      setData(apiResponseJSON);
-    };
-    fetching(); */
+    //catch AQUI SEU PUTO
   }, []);
 
-  //let retData = JSON.stringify(data);
-  //teste atualização git 4 ADD
+  let animationDelay = 0;
 
   return (
-    <>
+    <div className={classes.container}>
       {data.map((item, i) => {
+        animationDelay = animationDelay + 100;
         if (i < 12) {
           return (
             <Card
@@ -32,12 +27,22 @@ function FetchData() {
               thumbnail={item.thumbnail}
               platform={item.platform}
               desc={item.short_description}
+              style={{ animationDelay: `${animationDelay}ms` }}
             />
           );
         }
       })}
-    </>
+    </div>
   );
 }
 
 export default FetchData;
+
+/*     
+      const fetching = async () => {
+      const apiResponse = await fetch("http://localhost:5000/games");
+      const apiResponseJSON = await apiResponse.json();
+      //console.log(apiResponseJSON);
+      setData(apiResponseJSON);
+    };
+    fetching(); */

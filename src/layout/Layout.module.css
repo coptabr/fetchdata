@@ -1,11 +1,13 @@
 .container {
-  border: 1px solid red;
+  /*   outline: 1px solid rgb(162, 0, 255); */
+  padding: 3px;
   width: 80vw;
   min-width: 320px;
   max-width: 1015px;
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-items: center;
   justify-content: center;
+  align-items: center;
 }
